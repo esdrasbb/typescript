@@ -1,24 +1,19 @@
-//Intersection
+// Day 3 - exercise 1
 
-type User = {
-  idUser: number
-  name: string
-  age: number
-}
+let pi = 3.14159
+let tau = pi * 2
 
-type JobRole = {
-  idJobRole: number
-  role: 'Admin' | 'View'
-}
+console.log(`${tau} is ${pi} times two.`)
 
-type Employee = User & JobRole
+// Day 3 - exercise 2
 
-const firstEmployee: Employee = {
-  idUser: 1,
-  name: 'Foo',
-  age: 30,
-  idJobRole: 1,
-  role: 'Admin'
-}
+let pie: string
+pie = 'blueberry'
 
-console.log(firstEmployee)
+console.log(`I like to eat ${pie}-flavored pie.`)
+
+// Day 3 - exercise 3
+
+let isFoo: boolean = true
+
+console.log(`${isFoo ? 'Oh, Hi Foo' : 'Who are you'}`)
