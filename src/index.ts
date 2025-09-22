@@ -1,9 +1,22 @@
-// Day 5 - Exercise 4
+// Day 5 - Exercise 5
 
-class Employee implements Employee {
-    constructor(public title: string, public salary: number) {}
+interface UserSchema {
+    id: number
+    name: string
 }
 
-const employee = new Employee('Engineer', 100000);
+class User implements UserSchema {
+    constructor(public name: string, readonly id: number) {
+      this.id = id
+      this.name = name
+    }
+}
 
-console.log(`The new employee's title is ${employee.title} and they earn $ ${employee.salary}.`);
+const user = new User('Dog', 1)
+
+console.log(user.id)
+
+user.name = 'Harold' // pode mudar
+//user.id = 5 // nao pode mudar
+
+console.log(`User:`, user)
