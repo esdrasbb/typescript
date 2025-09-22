@@ -1,10 +1,9 @@
-// Day 5 - Exercise 3
+// Day 5 - Exercise 4
 
-class MC {
-    greet(event:string  = 'party'): string {
-      return `Welcome to the ${event}`;
-    }
+class Employee implements Employee {
+    constructor(public title: string, public salary: number) {}
 }
 
-const mc = new MC();
-console.log(mc.greet('show'));
+const employee = new Employee('Engineer', 100000);
+
+console.log(`The new employee's title is ${employee.title} and they earn $ ${employee.salary}.`);
