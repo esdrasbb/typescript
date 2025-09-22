@@ -1,3 +1,15 @@
+// Day 5 - Exercise 1
 
-const code : number = 25
-console.log(code)
+interface CartItem {
+  id: number
+  title: string
+  variantId?: number
+}
+
+
+function addToCart(item: CartItem) {
+    console.log(`Adding "${item.title}" to cart.`);
+  }
+
+addToCart({id: 1, title: 'shoes'});
+
