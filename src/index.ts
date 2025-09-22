@@ -1,15 +1,15 @@
-// Day 5 - Exercise 1
+// Day 5 - Exercise 2
 
-interface CartItem {
-  id: number
-  title: string
-  variantId?: number
+interface People { 
+  name: string
+  age: number
 }
 
+class Person implements People {
+    constructor(public name: string, public age: number) {
+    }
+}
 
-function addToCart(item: CartItem) {
-    console.log(`Adding "${item.title}" to cart.`);
-  }
+const alfred = new Person('Alfred', 31);
 
-addToCart({id: 1, title: 'shoes'});
-
+console.log(`${alfred.name} is ${alfred.age} years old.`);
